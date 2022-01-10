@@ -12,6 +12,11 @@ body {
   font-family: 'Martel Sans', sans-serif;
   margin: 0;
   padding: 0;
+  display: grid;
+}
+
+h3 {
+  text-transform: uppercase;
 }
 
 .header {
@@ -70,4 +75,24 @@ body {
 
 .header-avatar p {
   border-left: 2px solid #a7a9bf;
+}
+
+nav {
+  background-color: #4d4c72;
+}
+
+.nav-icon {
+  height: 40px;
+  width: 40px;
+}
+
+.social-image {
+  background-color: #7477bf;
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+}
+
+.social-icon {
+  fill: white;
 }
