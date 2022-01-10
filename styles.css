@@ -86,11 +86,15 @@ nav {
   width: 40px;
 }
 
-.social-image {
-  background-color: #7477bf;
+.social-image,
+.profile-image {
   border-radius: 50%;
   height: 48px;
   width: 48px;
+}
+
+.social-image {
+  background-color: #7477bf;
 }
 
 .social-icon {
