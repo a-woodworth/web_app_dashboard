@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;700&display=swap" 
       rel="stylesheet">
+    <link rel="stylesheet" href="css/toggle-switch.css">
     <link rel="stylesheet" href="css/styles.css">
 
     <title>WebApp Dashboard</title>
@@ -221,8 +222,45 @@
       </section>
 
       <!-- Settings Section -->
-      <section>
+      <section class="settings">
         <h3>Settings</h3>
+        <div class="toggle">
+          <p>Send Email Notifications</p>
+          <label class="switch-light switch-ios toggle-btn" onclick="">
+            <input type="checkbox">
+            <span class="toggle-color">
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+        </div>
+        <div class="toggle">
+          <p>Set Profile to Public</p>
+          <label class="switch-light switch-ios toggle-btn" onclick="">
+            <input type="checkbox">
+            <span class="toggle-color">
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+        </div>
+
+        <select name="timezone" class="timezone">
+          <option value="" disabled selected>Select Timezone</option>
+          <option value="EST">Eastern Standard Time</option>
+          <option value="EST">Central Standard Time</option>
+          <option value="EST">Mountain Standard Time</option>
+          <option value="EST">Pacific Standard Time</option>
+          <option value="EST">Alaska Standard Time</option>
+          <option value="EST">Hawaii Standard Time</option>
+        </select>
+
+        <div class="settings-btn">
+          <button class="btn-primary" id="save">Save</button>
+          <button class="btn-disabled" id="cancel">Cancel</button>
+        </div>
       </section>
     </main>
 

@@ -100,3 +100,7 @@ nav {
 .social-icon {
   fill: white;
 }
+
+.toggle-btn {
+  width: 100px; 
+}
