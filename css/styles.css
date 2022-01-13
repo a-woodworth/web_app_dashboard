@@ -45,6 +45,9 @@ h3 {
   grid-area: header;
   padding: 0 10px;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header h1,
@@ -61,18 +64,11 @@ h3 {
   font-size: .75em;
 }
 
-.header ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.header-user-block {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
   align-items: center;
-}
-
-.header li:first-child {
-  margin-right: auto;
 }
 
 .header-notifications {
@@ -89,7 +85,7 @@ h3 {
   position: absolute;
   top: -0px;
   right: 0px;
-  transform: translateY(-14px);
+  transform: translateY(-8px);
   padding: 3px;
   background-color: white;
   border-radius: 50%;
@@ -102,7 +98,7 @@ h3 {
   width: 40px;
 }
 
-.header-avatar p {
+.header-avatar {
   border-left: 2px solid #a7a9bf;
 }
 
@@ -175,18 +171,28 @@ canvas {
 --------------------------- */
 @media (min-width:  768px) {
   .grid-container {
-    grid-template-columns: 55px 1fr;
+    grid-template-columns: 120px 1fr;
     grid-template-areas:
       "header header"
       "navigation main";
   }
 
+  .header {
+    padding: 0;
+  }
+
   .header h1 {
     font-size: 2em;
+    margin-left: 25px;
   }
 
   .header h3 {
     font-size: 1em;
+    width: 175px;
+  }
+
+  .header-user-block {
+    margin-right: 25px;
   }
 
   .notifications-icon {
@@ -195,7 +201,7 @@ canvas {
   }
 
   .notifications-dot {
-    transform: translateY(-30px);
+    transform: translateY(-10px);
     padding: 4px;
   }
 
@@ -210,6 +216,8 @@ canvas {
   }
 
   .nav-icon {
+    height: 60px;
+    width: 60px;
     margin-top: 20px;
   }
 
@@ -240,5 +248,11 @@ canvas {
 
   .chart-container-half {
     width: 45vw;
+  }
+}
+
+@media (min-width:  1024px) {
+  .header h3 {
+    width: 150px;
   }
 }
