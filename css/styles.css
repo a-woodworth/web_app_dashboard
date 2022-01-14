@@ -16,6 +16,8 @@ body {
   font-family: 'Martel Sans', sans-serif;
   margin: 0;
   padding: 0;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 .grid-container {
@@ -30,6 +32,7 @@ body {
 
 h3 {
   font-size: 1em;
+  font-weight: 300;
   line-height: 1.6rem;
   text-transform: uppercase;
 }
@@ -44,20 +47,24 @@ h3 {
   color: white;
   grid-area: header;
   padding: 0 10px;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.trademark {
+  font-weight: 200;
+}
+
 .header h1,
 .header h3 {
-  font-weight: 300;
   text-transform: none;
 }
 
 .header h1 {
   font-size: 1.125em;
+  font-weight: 400;
 }
 
 .header h3 {
@@ -140,6 +147,35 @@ canvas {
   width: 95vw;
 }
 
+/*Traffic Section*/
+
+.traffic-header h3 {
+  font-weight: 300;
+  margin: 0 auto;
+  padding-left: 10px;
+}
+
+.traffic-nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 5px;
+  padding: 0;
+}
+
+.traffic-nav li {
+  cursor: pointer;
+}
+
+.active {
+  background-color: #81c98f;
+  border-radius: 20px;
+  color: white;
+  padding: 5px 15px;
+}
+
 .social-image,
 .profile-image {
   border-radius: 50%;
@@ -188,7 +224,6 @@ canvas {
 
   .header h3 {
     font-size: 1em;
-    width: 175px;
   }
 
   .header-user-block {
@@ -221,8 +256,13 @@ canvas {
     margin-top: 20px;
   }
 
+  /*Dashboard Styles*/
   main {
     grid-template-columns: 50%;
+  }
+
+  .main-header {
+    grid-column: 1 / span 2;
   }
 
   .traffic, 
@@ -243,16 +283,16 @@ canvas {
   }
 
   .chart-container-full {
-    width: 90vw;
+    width: 80vw;
   }
 
   .chart-container-half {
-    width: 45vw;
+    width: 40vw;
   }
-}
 
-@media (min-width:  1024px) {
-  .header h3 {
-    width: 150px;
+  /*Traffic Section*/
+
+  .traffic-header h3 {
+    padding-left: 25px;
   }
 }
