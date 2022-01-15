@@ -30,10 +30,18 @@ body {
     "main";
 }
 
+h2, h3 {
+  line-height: 1.6rem;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
 h3 {
   font-size: 1em;
   font-weight: 300;
-  line-height: 1.6rem;
   text-transform: uppercase;
 }
 
@@ -136,6 +144,27 @@ nav {
 main {
   display: grid;
   grid-area: main;
+}
+
+.main-header {
+  height: 60px;
+  width: 100%;
+  display: flex;
+}
+
+.headline {
+  font-size: 1em;
+  font-weight: 400;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+.tab {
+  background-color: #f7f7f7;
+  border-bottom: 2px solid #cccccc;
+  border-left: 2px solid #cccccc;
+  height: 100%;
+  width: 100%;
 }
 
 canvas {
@@ -263,6 +292,16 @@ canvas {
 
   .main-header {
     grid-column: 1 / span 2;
+    height: 80px;
+  }
+
+  .alert {
+    grid-column: 1 / span 2;
+  }
+
+  .headline {
+    font-size: 1.5em;
+    padding: 0 25px;
   }
 
   .traffic, 
