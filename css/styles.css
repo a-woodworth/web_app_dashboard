@@ -288,15 +288,17 @@ canvas {
 }
 
 
-/* --------------------------
-  New Members Styles
---------------------------- */
-.members {
+/*--------------------------------------
+  New Members & Recent Activity Styles
+-------------------------------------- */
+.members,
+.recent-activity {
   border-top: 1px solid #ccc;
   padding-top: 15px;
 }
 
-.members-container {
+.members-container,
+.recent-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -305,7 +307,8 @@ canvas {
   margin: 0 10px;
 }
 
-.members-container:last-child {
+.members-container:last-child,
+.recent-container:last-child {
   border-bottom: none;
 }
 
@@ -323,19 +326,43 @@ canvas {
   font-weight: 300;
 }
 
-.members-container p {
+.members-container p,
+.recent-post {
   font-weight: 200;
   line-height: .5rem;
   margin: 0;
 }
 
-.members-container p:last-child {
+.members-container p:last-child,
+.recent-post {
   padding-bottom: 20px;
 }
 
-.members-info {
+.members-info,
+.recent-post {
   margin: auto;
   text-align: center;
+}
+
+.recent-post {
+  font-size: .85em;
+  line-height: 1rem;
+  margin: -10px 0 0;
+  width: 100%;
+}
+
+.recent-post p {
+  margin: 0;
+}
+
+.post-title {
+  font-weight: 400;
+}
+
+.arrow {
+  height: 0;
+  margin: 0;
+  visibility: hidden;
 }
 
 
