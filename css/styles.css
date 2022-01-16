@@ -94,6 +94,7 @@ p {
   margin-right: 15px;
   position: relative;
 }
+
 .notifications-icon {
   height: 25px;
   width: 25px;
@@ -220,6 +221,9 @@ canvas {
 /* --------------------------
   Social Media Styles
 --------------------------- */
+.social {
+  margin-bottom: 10px;
+}
 
 .social-image,
 .profile-image {
@@ -281,6 +285,57 @@ canvas {
 .is-off-screen {
   height: 0;
   width: 0;
+}
+
+
+/* --------------------------
+  New Members Styles
+--------------------------- */
+.members {
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+}
+
+.members-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin: 0 10px;
+}
+
+.members-container:last-child {
+  border-bottom: none;
+}
+
+.profile-image {
+  margin: 15px 0;
+}
+
+.members-container a {
+  color: #7477bf;
+  font-weight: 200;
+  text-decoration: none;
+}
+
+.members-container a:hover {
+  font-weight: 300;
+}
+
+.members-container p {
+  font-weight: 200;
+  line-height: .5rem;
+  margin: 0;
+}
+
+.members-container p:last-child {
+  padding-bottom: 20px;
+}
+
+.members-info {
+  margin: auto;
+  text-align: center;
 }
 
 
@@ -358,19 +413,19 @@ canvas {
   }
 
   .traffic, 
-  .social {
+  .social,
+  .members, 
+  .recent-activity,
+  .message,
+  .settings {
     grid-column: 1 / span 2;
   }
 
-  .daily, 
-  .members, 
-  .message {
+  .daily {
     grid-column: 1 / span 1;
   }
 
-  .mobile,
-  .recent-activity,
-  .settings {
+  .mobile {
     grid-column: 2 / span 1;
   }
 
@@ -404,15 +459,49 @@ canvas {
   .social-container {
     margin: 0 5px 0 0;
   }
+
+  /*New Members Section*/
+  .members-container {
+    flex-direction: row;
+    margin: 0 25px;
+  }
+
+  .members-container p:last-child {
+    padding: 0;
+  }
+
+  .members-info {
+    margin-left: 10px;
+    text-align: left;
+  }
 }
 
 @media (min-width: 1024px) {
+  .members, 
+  .message {
+    grid-column: 1 / span 1;
+  }
+
+  .recent-activity,
+  .settings {
+    grid-column: 2 / span 1;
+  }
+
   .social-wrapper {
     margin: 0 15px 20px 25px;
   }
-  
+
   .social-container {
     margin: 0 10px 0 0;
+  }
+
+  /*New Members Section*/
+  .members {
+    border-right: 1px solid #ccc;
+  }
+
+  .members-container {
+    margin: 0 25px;
   }
 }
 
