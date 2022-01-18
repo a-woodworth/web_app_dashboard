@@ -450,7 +450,7 @@ textarea {
 
 .timezone {
   color: #999;
-  padding: 10px 0;
+  padding: 10px 15px;
   margin: 10px;
   width: calc(100% - 20px);
 }
