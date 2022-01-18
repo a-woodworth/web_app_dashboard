@@ -286,14 +286,14 @@
     left: 0;
     width: 100%;
     opacity: 0;
-    line-height: 1.875em;
+    line-height: 2.25em;  /*Changed to custom size*/
     vertical-align: middle;
     transition: all .2s ease-out; }
     .switch-ios.switch-light > span span:first-of-type {
       opacity: 1;
-      padding-left: 1.875em; }
+      padding-left: 3.5em; }  /*Changed to customer size*/
     .switch-ios.switch-light > span span:last-of-type {
-      padding-right: 1.875em; }
+      padding-right: 3.5em; }  /*Changed to custom size*/
   .switch-ios.switch-light input:checked ~ span a {
     left: 100%;
     border-color: #D8D9DB; /*Changed to custom color*/

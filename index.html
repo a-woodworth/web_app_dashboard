@@ -224,46 +224,49 @@
       <!-- Settings Section -->
       <section class="settings">
         <h3>Settings</h3>
-        <div class="toggle">
-          <p>Send Email Notifications</p>
-          <label class="switch-light switch-ios toggle-btn" onclick="">
-            <input type="checkbox">
-            <span class="toggle-color">
-              <span>Off</span>
-              <span>On</span>
-              <a></a>
-            </span>
-          </label>
-        </div>
-        <div class="toggle">
-          <p>Set Profile to Public</p>
-          <label class="switch-light switch-ios toggle-btn" onclick="">
-            <input type="checkbox">
-            <span class="toggle-color">
-              <span>Off</span>
-              <span>On</span>
-              <a></a>
-            </span>
-          </label>
+        <div class="toggle-wrapper">
+          <div class="toggle">
+            <p>Send Email Notifications</p>
+            <label class="switch-light switch-ios toggle-btn" onclick="">
+              <input type="checkbox">
+              <span class="toggle-color">
+                <span>Off</span>
+                <span>On</span>
+                <a></a>
+              </span>
+            </label>
+          </div>
+          <div class="toggle">
+            <p>Set Profile to Public</p>
+            <label class="switch-light switch-ios toggle-btn" onclick="">
+              <input type="checkbox">
+              <span class="toggle-color">
+                <span>Off</span>
+                <span>On</span>
+                <a></a>
+              </span>
+            </label>
+          </div>
         </div>
 
-        <select name="timezone" class="timezone">
-          <option value="" disabled selected>Select Timezone</option>
-          <option value="EST">Eastern Standard Time</option>
-          <option value="EST">Central Standard Time</option>
-          <option value="EST">Mountain Standard Time</option>
-          <option value="EST">Pacific Standard Time</option>
-          <option value="EST">Alaska Standard Time</option>
-          <option value="EST">Hawaii Standard Time</option>
-        </select>
+        <div class="custom-select">
+          <select name="timezone" class="timezone">
+            <option value="" disabled selected>Select Timezone</option>
+            <option value="EST">Eastern Standard Time</option>
+            <option value="EST">Central Standard Time</option>
+            <option value="EST">Mountain Standard Time</option>
+            <option value="EST">Pacific Standard Time</option>
+            <option value="EST">Alaska Standard Time</option>
+            <option value="EST">Hawaii Standard Time</option>
+          </select>
+        </div>
 
         <div class="settings-btn">
           <button class="btn-primary" id="save">Save</button>
-          <button class="btn-disabled" id="cancel">Cancel</button>
+          <button class="btn-secondary" id="cancel">Cancel</button>
         </div>
       </section>
     </main>
-
     <!-- Social Media SVGs -->
     <svg class="is-off-screen" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <symbol id="facebook">
