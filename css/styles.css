@@ -190,7 +190,8 @@ canvas {
 .recent-activity h3,
 .message h3,
 .settings h3 {
-  font-weight: 300;
+  font-size: .85em;
+  font-weight: 400;
   margin: 0 auto;
   padding-left: 10px;
 }
@@ -371,6 +372,46 @@ canvas {
   visibility: hidden;
 }
 
+.message-container {
+  margin: 0 10px;
+}
+
+.form-field,
+.form-area,
+.btn-primary {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+input[type="text"],
+textarea {
+  color: #ccc;
+  font-family: 'Martel Sans', sans-serif;
+  font-size: .85em;
+  font-weight: 200;
+  line-height: 1.6rem;
+  margin: 10px 0;
+  padding: 5px 0 5px 10px;
+}
+
+textarea {
+  height: 150px;
+  margin: 0;
+}
+
+.btn-primary {
+  background-color: #7477bf;
+  color: white;
+  font-family: 'Martel Sans', sans-serif;
+  font-size: 1em;
+  font-weight: 200;
+  margin: 10px 0 10px;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+
 
 /* --------------------------
   Media Queries
@@ -495,7 +536,8 @@ canvas {
 
   /*New Members Section*/
   .members-container,
-  .recent-container {
+  .recent-container,
+  .message-container {
     flex-direction: row;
     margin: 0 25px;
   }
@@ -540,7 +582,8 @@ canvas {
   }
 
   /*New Members Section*/
-  .members {
+  .members,
+  .message {
     border-right: 1px solid #ccc;
   }
 
