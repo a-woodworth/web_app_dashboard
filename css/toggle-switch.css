@@ -291,7 +291,7 @@
     transition: all .2s ease-out; }
     .switch-ios.switch-light > span span:first-of-type {
       opacity: 1;
-      padding-left: 3.5em; }  /*Changed to customer size*/
+      padding-left: 3.5em; }  /*Changed to custom size*/
     .switch-ios.switch-light > span span:last-of-type {
       padding-right: 3.5em; }  /*Changed to custom size*/
   .switch-ios.switch-light input:checked ~ span a {

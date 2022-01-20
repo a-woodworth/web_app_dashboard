@@ -174,11 +174,12 @@ main {
 
 canvas {
   max-width: 100%;
+  margin: 0 10px;
 }
 
 .chart-container-full,
 .chart-container-half {
-  width: 95vw;
+  width: calc(100% - 20px);
 }
 
 /*Section Headers*/
@@ -208,13 +209,16 @@ canvas {
 }
 
 /*Traffic Section*/
+.traffic {
+  width: calc(100%);
+}
+
 .traffic-nav {
   list-style-type: none;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 10px;
-  margin: 5px;
+  margin: 0;
   padding: 0;
 }
 
@@ -226,7 +230,7 @@ canvas {
   background-color: #81c98f;
   border-radius: 20px;
   color: white;
-  padding: 5px 15px;
+  padding: 4px 10px;
 }
 
 
@@ -572,11 +576,11 @@ textarea {
   }
 
   .chart-container-full {
-    width: 80vw;
+    width: calc(100% - 50px);
   }
 
   .chart-container-half {
-    width: 40vw;
+    width: calc(100% - 50px);
   }
 
   /*Section Headers*/
@@ -589,6 +593,37 @@ textarea {
   .message h3,
   .settings h3 {
     padding-left: 25px;
+  }
+
+  canvas {
+    max-width: 100%;
+    margin: 0 25px;
+  }
+
+  /*Traffic Section*/
+  .traffic-wrapper {
+    display: grid;
+    grid-column: 1fr 1fr;
+    margin-top: 20px;
+  }
+
+  .traffic-header {
+    grid-column: 1;
+  }
+
+  .traffic-header h3 {
+    line-height: 3;
+  }
+
+  .traffic-nav {
+    grid-column: 2;
+    justify-content: flex-end;
+    margin: 0 25px;
+  }
+
+  .traffic-nav li {
+    line-height: 1.6;
+    margin-left: 10px;
   }
 
   /*Social Media Section*/
@@ -711,4 +746,3 @@ textarea {
     margin-top: 25px;
   }
 }
-
