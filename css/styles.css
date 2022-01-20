@@ -173,7 +173,7 @@ main {
   width: 100%;
 }
 
-.alert {
+.alert-banner {
   background-color: #7477bf;
   border-radius: 4px;
   display: flex;
@@ -183,13 +183,13 @@ main {
   padding: 0 10px;
 }
 
-.alert p {
+.alert-banner p {
   color: white;
   font-weight: 200;
   line-height: 1rem;
 }
 
-.btn-alert {
+.alert-banner-close {
   background-color: #7477bf;
   border: none;
   color: white;
@@ -580,6 +580,9 @@ textarea {
 
   .alert {
     grid-column: 1 / span 2;
+  }
+
+  .alert-banner {
     margin: 0 25px 25px;
   }
 
