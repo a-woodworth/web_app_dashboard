@@ -152,9 +152,10 @@ main {
 }
 
 .main-header {
+  display: flex;
   height: 60px;
   width: 100%;
-  display: flex;
+  margin-bottom: 20px;
 }
 
 .headline {
@@ -170,6 +171,33 @@ main {
   border-left: 2px solid #cccccc;
   height: 100%;
   width: 100%;
+}
+
+.alert {
+  background-color: #7477bf;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px 25px;
+  padding: 0 10px;
+}
+
+.alert p {
+  color: white;
+  font-weight: 200;
+  line-height: 1rem;
+}
+
+.btn-alert {
+  background-color: #7477bf;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: 'Martel Sans', sans-serif;
+  font-weight: 200;
+  line-height: 1rem;
+  text-transform: uppercase;
 }
 
 canvas {
@@ -191,7 +219,7 @@ canvas {
 .recent-activity h3,
 .message h3,
 .settings h3 {
-  font-size: .85em;
+  font-size: 1em;
   font-weight: 400;
   margin: 0 auto;
   padding-left: 10px;
@@ -366,7 +394,8 @@ canvas {
   margin: 0;
 }
 
-.post-title {
+.bold, 
+.post-title{
   font-weight: 400;
 }
 
@@ -551,6 +580,7 @@ textarea {
 
   .alert {
     grid-column: 1 / span 2;
+    margin: 0 25px 25px;
   }
 
   .headline {
@@ -604,7 +634,6 @@ textarea {
   .traffic-wrapper {
     display: grid;
     grid-column: 1fr 1fr;
-    margin-top: 20px;
   }
 
   .traffic-header {
