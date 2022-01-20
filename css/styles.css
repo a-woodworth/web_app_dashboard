@@ -202,11 +202,11 @@ main {
 
 canvas {
   max-width: 100%;
-  margin: 0 10px;
 }
 
 .chart-container-full,
 .chart-container-half {
+  margin: 10px;
   width: calc(100% - 20px);
 }
 
@@ -598,6 +598,7 @@ textarea {
   }
 
   .daily {
+    border-right: 1px solid #ccc;
     grid-column: 1 / span 1;
   }
 
@@ -605,11 +606,9 @@ textarea {
     grid-column: 2 / span 1;
   }
 
-  .chart-container-full {
-    width: calc(100% - 50px);
-  }
-
+  .chart-container-full,
   .chart-container-half {
+    margin: 20px 25px;
     width: calc(100% - 50px);
   }
 
@@ -625,15 +624,10 @@ textarea {
     padding-left: 25px;
   }
 
-  canvas {
-    max-width: 100%;
-    margin: 0 25px;
-  }
-
   /*Traffic Section*/
   .traffic-wrapper {
     display: grid;
-    grid-column: 1fr 1fr;
+    grid-column: 1;
   }
 
   .traffic-header {
