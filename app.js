@@ -53,3 +53,48 @@ let trafficDataHourly = new Chart(trafficChart, {
     }
   }
 });
+
+// Daily Traffic Bar Chart
+const dailyBarChart = document.getElementById('daily-chart');
+
+let dailyDataBar = new Chart(dailyBarChart, {
+  type: 'bar',
+  data: {
+    labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+    datasets: [{
+      label: 'Daily Traffic',
+      data: [75, 115, 175, 125, 225, 200, 100],
+      backgroundColor: 'rgb(116, 119, 191)',
+      borderColor: 'rgb(104, 107, 172)',
+      borderWidth: 1
+    }],
+  },
+  options: {
+    plugins: {
+      legend: {
+        display: false,
+      }
+    },
+    responsive: true,
+    scales: {
+      y: {
+        min: 0,
+        max: 250,
+        ticks: {
+          stepSize: 50
+        }
+      }
+    }
+  }
+});
+
+// Mobile Users Doughnut Chart
+const mobileUsersChart = document.getElementById('mobile-chart');
+
+let mobileDataDoughnut = new Chart(mobileUsersChart, {
+  type: 'doughnut',
+  data: {
+    
+  }
+});
+
