@@ -20,3 +20,36 @@ alertBanner.addEventListener('click', (e)=> {
 // Traffic Chart
 const trafficChart = document.getElementById('traffic-chart');
 
+let trafficDataHourly = new Chart(trafficChart, {
+  type: 'line',
+  data: {
+    labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', 
+    '27-3', '4-10', '11-7', '18-24', '25-31'],
+    datasets: [{
+      label: 'Hourly Traffic',
+      data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1800, 2250, 1500, 2500],
+      fill: true,
+      backgroundColor: 'rgb(213, 214, 236)',
+      borderColor: 'rgb(204, 204, 204)',
+      borderWidth: 1,
+      tension: 0.5
+    }],
+  },
+  options: {
+    plugins: {
+      legend: {
+        display: false
+      }
+    },
+    responsive: true,
+    scales: {
+      y: {
+        min: 0,
+        max: 2500,
+        ticks: {
+          stepSize: 500
+        }
+      }
+    }
+  }
+});
