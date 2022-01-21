@@ -409,8 +409,10 @@ canvas {
 /* --------------------------
   Message User Styles
 --------------------------- */
-
 .message-container {
+  display: grid;
+  grid-template-rows: 40px 150px 1fr;
+  gap: 10px;
   margin: 0 10px;
 }
 
@@ -433,13 +435,13 @@ textarea,
   font-size: .85em;
   font-weight: 200;
   line-height: 1.6rem;
-  margin: 10px 0;
+  margin: 0;
   padding: 5px 0 5px 10px;
 }
 
 textarea {
   height: 150px;
-  margin: 0;
+  margin: 0 0 10px;
 }
 
 /*Button Styles*/
@@ -450,7 +452,7 @@ textarea {
   font-family: 'Martel Sans', sans-serif;
   font-size: 1em;
   font-weight: 200;
-  margin: 10px 0 10px;
+  margin: 10px 0 20px;
   padding: 5px 0;
   text-transform: uppercase;
 }
@@ -458,6 +460,7 @@ textarea {
 .btn-secondary {
   background-color: #999;
 }
+
 
 /* --------------------------
   Settings Styles
@@ -481,6 +484,11 @@ textarea {
   font-weight: 200;
 }
 
+/*Safari outline border-radius issue*/
+.switch-ios.switch-light > span {
+  outline-style: auto;
+}
+
 .timezone {
   color: #999;
   padding: 10px 15px;
@@ -490,6 +498,7 @@ textarea {
 
 .custom-select select {
   appearance: none;
+  -webkit-appearance: none;
 }
 
 .custom-select::after {
@@ -500,10 +509,6 @@ textarea {
   top: 20%;
   right: 30px;
   transform: rotate(45deg);
-}
-
-.custom-select {
-  position: relative;
 }
 
 .settings-btn {
@@ -665,8 +670,7 @@ textarea {
 
   /*New Members Section*/
   .members-container,
-  .recent-container,
-  .message-container {
+  .recent-container {
     flex-direction: row;
     margin: 0 25px;
   }
@@ -688,6 +692,15 @@ textarea {
 
   .arrow {
     visibility: visible;
+  }
+
+  /*Message Section*/
+  .message-container {
+    margin: 0 25px;
+  }
+
+  input[type="text"] {
+    margin: 0;
   }
 
   /*Settings Section*/
@@ -720,7 +733,7 @@ textarea {
   }
 
   .settings-btn {
-    margin: 0 25px;
+    margin: 10px 25px 0;
   }
 }
 
@@ -753,22 +766,25 @@ textarea {
     margin: 0 25px;
   }
 
+  /*Message Section*/
+  .message h3,
+  .settings h3 {
+    margin: 0 0 10px;
+  }
+
   /*Settings Section*/
+  .settings {
+    display: grid;
+    grid-template-rows: 25px 160px 1fr;
+  }
+
   .toggle-wrapper {
-    max-width: 70%;
+    max-width: 72%;
   }
 
   .toggle:first-child,
   .toggle:last-child {
     grid-column: 1 / span 2;
     gap: 10px;
-  }
-
-  .custom-select::after {
-    top: 40%;
-  }
-
-  .timezone {
-    margin-top: 25px;
   }
 }
