@@ -496,6 +496,10 @@ textarea {
   width: calc(100% - 20px);
 }
 
+.custom-select {
+  position: relative;
+}
+
 .custom-select select {
   appearance: none;
   -webkit-appearance: none;

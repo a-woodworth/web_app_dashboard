@@ -104,7 +104,6 @@ let mobileDataDoughnut = new Chart(mobileUsersChart, {
       'rgb(129, 201, 143)',
       'rgb(81, 182, 200)'
       ],
-      hoverOffset: 4,
       borderWidth: 0
     }],
   },
