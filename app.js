@@ -29,10 +29,11 @@ let trafficDataHourly = new Chart(trafficChart, {
       label: 'Hourly Traffic',
       data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1800, 2250, 1500, 2500],
       fill: true,
-      backgroundColor: 'rgb(213, 214, 236)',
+      backgroundColor: 'rgb(213, 214, 236, 0.5)',
       borderColor: 'rgb(204, 204, 204)',
       borderWidth: 1,
-      tension: 0.5
+      tension: 0.5,
+      showLine: true
     }],
   },
   options: {
@@ -94,7 +95,33 @@ const mobileUsersChart = document.getElementById('mobile-chart');
 let mobileDataDoughnut = new Chart(mobileUsersChart, {
   type: 'doughnut',
   data: {
-    
-  }
+    labels: ['Desktop', 'Tablet', 'Phones'],
+    datasets: [{
+      label: '# of Users',
+      data: [65, 20, 15],
+      backgroundColor: [
+      'rgb(104, 107, 172)',
+      'rgb(129, 201, 143)',
+      'rgb(81, 182, 200)'
+      ],
+      hoverOffset: 4,
+      borderWidth: 0
+    }],
+  },
+  options: {
+    aspectRatio: 2,
+    plugins: {
+      legend: {
+        position: 'right',
+        labels: {
+          boxWidth: 15,
+          boxHeight: 10,
+          font: {
+            weight: 800
+          }
+        }
+      }
+    },
+  },
 });
 
