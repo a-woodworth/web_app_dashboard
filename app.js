@@ -32,8 +32,7 @@ let trafficDataHourly = new Chart(trafficChart, {
       backgroundColor: 'rgb(213, 214, 236, 0.5)',
       borderColor: 'rgb(204, 204, 204)',
       borderWidth: 1,
-      tension: 0.5,
-      showLine: true
+      tension: 0.5
     }],
   },
   options: {
@@ -46,7 +45,7 @@ let trafficDataHourly = new Chart(trafficChart, {
     scales: {
       y: {
         min: 0,
-        max: 2500,
+        suggestedMax: 2500,
         ticks: {
           stepSize: 500
         }
