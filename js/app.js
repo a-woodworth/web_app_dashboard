@@ -39,7 +39,7 @@ let dailyBarChart = new Chart(dailyTrafficBarChart, {
 // Mobile Users Doughnut Chart
 const mobileUsersChart = document.getElementById('mobile-chart');
 
-let mobileDataDoughnut = new Chart(mobileUsersChart, {
+let mobileDoughnutChart = new Chart(mobileUsersChart, {
   type: 'doughnut',
   data: mobileDoughnutChartData,
   options: mobileDoughnutChartOptions
