@@ -18,6 +18,9 @@ alertBanner.addEventListener('click', (e)=> {
   }
 });
 
+// Notifications Dropdown
+
+
 // Traffic Chart
 const trafficChart = document.getElementById('traffic-chart');
 
