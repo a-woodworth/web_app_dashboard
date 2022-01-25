@@ -18,7 +18,29 @@ alertBanner.addEventListener('click', (e)=> {
   }
 });
 
+
 // Notifications Dropdown
+const notifications = document.querySelector('.notifications-content');
+const bellIcon = document.querySelector('.notifications-icon');
+
+// When bell clicked, show or hide notifications
+bellIcon.addEventListener('click', (e)=> {
+  showNotifications();
+});
+
+function showNotifications() {
+  notifications.classList.toggle('show-notifications');
+
+  // If notifications showing, hide if clicking on something else
+  window.addEventListener('click', (e)=> {
+    if (!e.target.matches('.notifications-icon')) {
+      const myNotifications = notifications;
+      if (myNotifications.classList.contains('show-notifications')) {
+        myNotifications.classList.remove('show-notifications');
+      }
+    }
+  });
+};
 
 
 // Traffic Chart

@@ -112,8 +112,8 @@ p {
   border-radius: 50%;
 }
 
-#notifications {
-  display: block;
+.notifications-content {
+  display: none;
   min-width: 200px;
   max-height: 360px;
   background: white;
@@ -125,7 +125,7 @@ p {
   box-shadow: 0px 4px 11px -1px rgba(0, 0, 0, 0.75);
 }
 
-#notifications:before {
+.notifications-content:before {
   position: absolute;
   content: "";
   background: #fff;
@@ -139,11 +139,14 @@ p {
 }
 
 .notification-title {
+  background-color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: #4d4c72;
   display: block;
   font-size: .85em;
-  padding: 10px 20px 5px;
-  color: #4d4c72;
   margin: 0;
+  padding: 10px 20px 5px;
 }
 
 .notification-title,
@@ -164,6 +167,10 @@ p {
   font-size: .75em;
   font-weight: 200;
   line-height: 1;
+}
+
+.show-notifications {
+  display: block;
 }
 
 .header-avatar img {
@@ -616,11 +623,11 @@ textarea {
     padding: 4px;
   }
 
-  #notifications {
+  .notifications-content {
     top: 100px;
   }
 
-  #notifications:before {
+  .notifications-content:before {
     left: 15px;
   }
 
