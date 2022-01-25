@@ -102,6 +102,26 @@ p {
   fill: white;
 }
 
+/*Keyframes for Notifications Icon*/
+@keyframes bell {
+  20% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+  60% {
+    transform: rotate(15deg);
+  }
+  80% {
+    transform: rotate(-15deg);
+  }
+}
+
+.notifications-icon:hover {
+  animation: bell 1.25s ease-in-out;
+}
+
 .notifications-dot {
   position: absolute;
   top: -0px;
