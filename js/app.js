@@ -44,6 +44,12 @@ function showNotifications() {
 
 
 // Charts
+function updateChartData(chart, newData) {
+  chart.data.labels = newData.labels;
+  chart.data.datasets = newData.datasets;
+  chart.update();
+};
+
 // *Line Chart*
 let trafficLineChart = new Chart(trafficChart, {
   type: 'line',
@@ -87,32 +93,12 @@ trafficNavList.addEventListener('click', (e) => {
 
   // Get selected chart
   if (trafficNavListItem === trafficNavHourly) {
-    trafficLineChart.destroy();
-    trafficLineChart = new Chart(trafficChart, {
-      type: 'line',
-      data: trafficDataByHour,
-      options: trafficChartOptions
-    });
+    updateChartData(trafficLineChart, trafficDataByHour);
   } else if (trafficNavListItem === trafficNavDaily) {
-    trafficLineChart.destroy();
-    trafficLineChart = new Chart(trafficChart, {
-      type: 'line',
-      data: trafficDataByDay,
-      options: trafficChartOptions
-    });
+    updateChartData(trafficLineChart, trafficDataByDay);
   } else if (trafficNavListItem === trafficNavWeekly) {
-    trafficLineChart.destroy();
-    trafficLineChart = new Chart(trafficChart, {
-      type: 'line',
-      data: trafficDataByWeek,
-      options: trafficChartOptions
-    });
+    updateChartData(trafficLineChart, trafficDataByWeek);
   } else if (trafficNavListItem === trafficNavMonthly) {
-    trafficLineChart.destroy();
-    trafficLineChart = new Chart(trafficChart, {
-      type: 'line',
-      data: trafficDataByMonth,
-      options: trafficChartOptions
-    });
+    updateChartData(trafficLineChart, trafficDataByMonth);
   } 
 });
