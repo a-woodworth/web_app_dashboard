@@ -43,30 +43,76 @@ function showNotifications() {
 };
 
 
-// Traffic Chart
-const trafficChart = document.getElementById('traffic-chart');
-
-let trafficDataHourly = new Chart(trafficChart, {
+// Charts
+// *Line Chart*
+let trafficLineChart = new Chart(trafficChart, {
   type: 'line',
-  data: trafficDataByHour,
+  data: trafficDefaultChart,
   options: trafficChartOptions
 });
 
-// Daily Traffic Bar Chart
-const dailyTrafficBarChart = document.getElementById('daily-chart');
-
+// *Bar Chart*
 let dailyBarChart = new Chart(dailyTrafficBarChart, {
   type: 'bar',
   data: dailyBarChartData,
   options: dailyBarChartOptions
 });
 
-// Mobile Users Doughnut Chart
-const mobileUsersChart = document.getElementById('mobile-chart');
-
+// *Doughnut Chart*
 let mobileDoughnutChart = new Chart(mobileUsersChart, {
   type: 'doughnut',
   data: mobileDoughnutChartData,
   options: mobileDoughnutChartOptions
 });
 
+// Traffic Navigation Bar
+const trafficNavList = document.querySelector('.traffic-nav');
+const trafficNavListItems = [...document.querySelector('.traffic-nav').getElementsByTagName('li')];
+const trafficNavHourly = trafficNavListItems[0];
+const trafficNavDaily = trafficNavListItems[1];
+const trafficNavWeekly = trafficNavListItems[2];
+const trafficNavMonthly = trafficNavListItems[3];
+
+trafficNavList.addEventListener('click', (e) => {
+  let trafficNavListItem = e.target;
+  let activeTrafficChart = trafficNavList.querySelector('.active');
+
+  // Check if traffic nav label is active
+  if (trafficNavListItem !== activeTrafficChart && 
+      trafficNavListItems.includes(trafficNavListItem)) {
+
+    trafficNavListItem.classList.add('active');
+    activeTrafficChart.classList.remove('active');
+  }
+
+  // Get selected chart
+  if (trafficNavListItem === trafficNavHourly) {
+    trafficLineChart.destroy();
+    trafficLineChart = new Chart(trafficChart, {
+      type: 'line',
+      data: trafficDataByHour,
+      options: trafficChartOptions
+    });
+  } else if (trafficNavListItem === trafficNavDaily) {
+    trafficLineChart.destroy();
+    trafficLineChart = new Chart(trafficChart, {
+      type: 'line',
+      data: trafficDataByDay,
+      options: trafficChartOptions
+    });
+  } else if (trafficNavListItem === trafficNavWeekly) {
+    trafficLineChart.destroy();
+    trafficLineChart = new Chart(trafficChart, {
+      type: 'line',
+      data: trafficDataByWeek,
+      options: trafficChartOptions
+    });
+  } else if (trafficNavListItem === trafficNavMonthly) {
+    trafficLineChart.destroy();
+    trafficLineChart = new Chart(trafficChart, {
+      type: 'line',
+      data: trafficDataByMonth,
+      options: trafficChartOptions
+    });
+  } 
+});
