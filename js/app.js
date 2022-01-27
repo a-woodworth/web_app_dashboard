@@ -106,13 +106,14 @@ trafficNavList.addEventListener('click', (e) => {
 
 // Message Users
 let members = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver'];
-const user = document.getElementById('user-name');
+const user = document.getElementById('autoComplete');
+// console.log(user);
 const message = document.getElementById('user-message');
 const send = document.getElementById('send');
 
 send.addEventListener('click', () => {
 
-  //Make sure user field and message are filled ou
+  // Make sure user field and message are filled ou
   if ( user.value  === '' && message.value === '' ) {
     alert('Please fill out user and message fields before sending message.');
   } else if ( user.value === '' ) {
@@ -121,5 +122,27 @@ send.addEventListener('click', () => {
     alert('Please fill out message field before sending message.');
   } else {
     alert(`Message successfully sent to ${user.value}.`);
+  }
+});
+
+// Add autoComplete.js for user name search when messaging
+// * Info & usage guide at: https://tarekraafat.github.io/autoComplete.js/ * 
+const autoCompleteJS = new autoComplete({
+  selector: "#autoComplete",
+  data: {
+    src: members
+  },
+  resultItem: {
+    highlight: {
+      render: true
+    }
+  },
+  events: {
+    input: {
+      selection: (event) => {
+          const selection = event.detail.selection.value;
+          autoCompleteJS.input.value = selection;
+      }
+    }
   }
 });

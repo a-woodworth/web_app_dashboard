@@ -531,6 +531,15 @@ textarea {
   margin: 0 0 10px;
 }
 
+/*custom autoComplete Styles*/
+.autoComplete_wrapper > input {
+  width: 100%;
+}
+
+.autoComplete_wrapper > ul > li mark {
+  color: #81c98f;
+}
+
 /*Button Styles*/
 .btn-primary,
 .btn-secondary {
