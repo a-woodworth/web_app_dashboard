@@ -512,13 +512,18 @@ canvas {
 input[type="text"],
 textarea,
 .timezone {
-  color: #ccc;
   font-family: 'Martel Sans', sans-serif;
   font-size: .85em;
   font-weight: 200;
   line-height: 1.6rem;
   margin: 0;
   padding: 5px 0 5px 10px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #ccc;
+  opacity: 1;
 }
 
 textarea {

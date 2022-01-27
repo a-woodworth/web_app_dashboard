@@ -102,3 +102,24 @@ trafficNavList.addEventListener('click', (e) => {
     updateChartData(trafficLineChart, trafficDataByMonth);
   } 
 });
+
+
+// Message Users
+let members = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver'];
+const user = document.getElementById('user-name');
+const message = document.getElementById('user-message');
+const send = document.getElementById('send');
+
+send.addEventListener('click', () => {
+
+  //Make sure user field and message are filled ou
+  if ( user.value  === '' && message.value === '' ) {
+    alert('Please fill out user and message fields before sending message.');
+  } else if ( user.value === '' ) {
+    alert('Please fill out user field before sending message.');
+  } else if ( message.value === '' ) {
+    alert('Please fill out message field before sending message.');
+  } else {
+    alert(`Message successfully sent to ${user.value}.`);
+  }
+});
