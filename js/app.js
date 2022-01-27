@@ -107,13 +107,12 @@ trafficNavList.addEventListener('click', (e) => {
 // Message Users
 let members = ['Victoria Chambers', 'Dale Byrd', 'Dawn Wood', 'Dan Oliver'];
 const user = document.getElementById('autoComplete');
-// console.log(user);
 const message = document.getElementById('user-message');
 const send = document.getElementById('send');
 
 send.addEventListener('click', () => {
 
-  // Make sure user field and message are filled ou
+  // Make sure user field and message are filled out
   if ( user.value  === '' && message.value === '' ) {
     alert('Please fill out user and message fields before sending message.');
   } else if ( user.value === '' ) {
@@ -145,4 +144,20 @@ const autoCompleteJS = new autoComplete({
       }
     }
   }
+});
+
+
+// Settings -- save preferences in local storage
+const emailSetting = document.getElementById('email-setting');
+const profileSetting = document.getElementById('profile-setting');
+const timezoneSetting = document.querySelector('.timezone');
+const saveSetting = document.getElementById('save');
+const cancelSetting = document.getElementById('cancel');
+
+saveSetting.addEventListener('click', ()=> {
+
+});
+
+cancelSetting.addEventListener('click', ()=> {
+  
 });

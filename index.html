@@ -226,9 +226,9 @@
         <h3>Message User</h3>
         <form class="message-container">
           <input type="text" id="autoComplete" name="user-name" 
-          placeholder="Search for User" class="form-field" type="search" 
-          dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" 
-          autocapitalize="off" maxlength="2048" tabindex="1">
+          placeholder="Search for User" class="form-field"  dir="ltr" 
+          spellcheck=false autocomplete="off" autocapitalize="off" 
+          maxlength="2048" tabindex="1">
           <textarea id="user-message" name="user-message" 
           placeholder="Message for User" class="form-area"></textarea>
           <button class="btn-primary" id="send">Send</button>
@@ -242,7 +242,7 @@
           <div class="toggle">
             <p>Send Email Notifications</p>
             <label class="switch-light switch-ios toggle-btn" onclick="">
-              <input type="checkbox">
+              <input type="checkbox" id="email-setting">
               <span class="toggle-color">
                 <span>Off</span>
                 <span>On</span>
@@ -253,7 +253,7 @@
           <div class="toggle">
             <p>Set Profile to Public</p>
             <label class="switch-light switch-ios toggle-btn" onclick="">
-              <input type="checkbox">
+              <input type="checkbox" id="profile-setting">
               <span class="toggle-color">
                 <span>Off</span>
                 <span>On</span>
@@ -267,11 +267,11 @@
           <select name="timezone" class="timezone">
             <option value="" disabled selected>Select Timezone</option>
             <option value="EST">Eastern Standard Time</option>
-            <option value="EST">Central Standard Time</option>
-            <option value="EST">Mountain Standard Time</option>
-            <option value="EST">Pacific Standard Time</option>
-            <option value="EST">Alaska Standard Time</option>
-            <option value="EST">Hawaii Standard Time</option>
+            <option value="CST">Central Standard Time</option>
+            <option value="MST">Mountain Standard Time</option>
+            <option value="PST">Pacific Standard Time</option>
+            <option value="AKST">Alaska Standard Time</option>
+            <option value="HAST">Hawaii Standard Time</option>
           </select>
         </div>
 
