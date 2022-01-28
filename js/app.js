@@ -154,10 +154,38 @@ const timezoneSetting = document.querySelector('.timezone');
 const saveSetting = document.getElementById('save');
 const cancelSetting = document.getElementById('cancel');
 
-saveSetting.addEventListener('click', ()=> {
+getUserSettings();
 
+saveSetting.addEventListener('click', ()=> {
+  saveUserSettings();
 });
 
 cancelSetting.addEventListener('click', ()=> {
-  
+  // Remove settings from local storage
+  localStorage.clear();
+
+  // Reset toggle sliders and select box
+  emailSetting.checked = null;
+  profileSetting.checked = null;
+  timezoneSetting.value = '';
 });
+
+function saveUserSettings() {
+  localStorage.setItem('emailSetting', emailSetting.checked);
+  localStorage.setItem('profileSetting', profileSetting.checked);
+  localStorage.setItem('timezoneSetting', timezoneSetting.value);
+};
+
+function getUserSettings() {
+  if (localStorage.emailSetting) {
+    localStorage.getItem(emailSetting);
+  }
+
+  if (localStorage.profileSetting) {
+    localStorage.getItem(profileSetting);
+  }
+
+  if (localStorage.timezoneSetting ) {
+    localStorage.getItem(timezoneSetting);
+  }
+};
