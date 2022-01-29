@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Stylesheets for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,7 +65,7 @@
         <div class="tab"></div>
       </div>
       <!-- alert banner -->
-      <div class="alert" id="alert">
+      <div class="alert-wrapper" id="alert">
         <!-- JS will insert alert here -->
       </div>
 
@@ -242,7 +241,7 @@
           <div class="toggle">
             <p>Send Email Notifications</p>
             <label class="switch-light switch-ios toggle-btn" onclick="">
-              <input type="checkbox" id="email-setting">
+              <input type="checkbox" id="email-setting" name="email-setting">
               <span class="toggle-color">
                 <span>Off</span>
                 <span>On</span>
@@ -253,7 +252,7 @@
           <div class="toggle">
             <p>Set Profile to Public</p>
             <label class="switch-light switch-ios toggle-btn" onclick="">
-              <input type="checkbox" id="profile-setting">
+              <input type="checkbox" id="profile-setting" name="profile-setting">
               <span class="toggle-color">
                 <span>Off</span>
                 <span>On</span>
@@ -264,7 +263,7 @@
         </div>
 
         <div class="custom-select">
-          <select name="timezone" class="timezone">
+          <select name="timezone" class="timezone" title="timezone">
             <option value="" disabled selected>Select Timezone</option>
             <option value="EST">Eastern Standard Time</option>
             <option value="CST">Central Standard Time</option>

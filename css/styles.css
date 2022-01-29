@@ -691,7 +691,7 @@ textarea {
     height: 80px;
   }
 
-  .alert {
+  .alert-wrapper {
     grid-column: 1 / span 2;
   }
 

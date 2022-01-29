@@ -154,6 +154,7 @@ const timezoneSetting = document.querySelector('.timezone');
 const saveSetting = document.getElementById('save');
 const cancelSetting = document.getElementById('cancel');
 
+resetSettings();
 getUserSettings();
 
 saveSetting.addEventListener('click', ()=> {
@@ -163,12 +164,15 @@ saveSetting.addEventListener('click', ()=> {
 cancelSetting.addEventListener('click', ()=> {
   // Remove settings from local storage
   localStorage.clear();
+  resetSettings();
+});
 
+function resetSettings() {
   // Reset toggle sliders and select box
   emailSetting.checked = null;
   profileSetting.checked = null;
   timezoneSetting.value = '';
-});
+}
 
 function saveUserSettings() {
   localStorage.setItem('emailSetting', emailSetting.checked);
@@ -178,14 +182,14 @@ function saveUserSettings() {
 
 function getUserSettings() {
   if (localStorage.emailSetting) {
-    localStorage.getItem(emailSetting);
+    emailSetting.checked = JSON.parse(localStorage.getItem('emailSetting'));
   }
 
   if (localStorage.profileSetting) {
-    localStorage.getItem(profileSetting);
+    profileSetting.checked = JSON.parse(localStorage.getItem('profileSetting'));
   }
 
-  if (localStorage.timezoneSetting ) {
-    localStorage.getItem(timezoneSetting);
+  if (localStorage.timezoneSetting) {
+    timezoneSetting.value = localStorage.getItem('timezoneSetting');
   }
 };
