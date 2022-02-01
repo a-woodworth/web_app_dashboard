@@ -1,0 +1,130 @@
+// ___________________________________________________________________
+// Containers
+// ___________________________________________________________________
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  grid-template-areas: 
+    "header"
+    "navigation"
+    "main";
+
+  @media #{$brkpoint-md} {
+    grid-template-columns: 120px 1fr;
+    grid-template-areas:
+      "header header"
+      "navigation main";
+  }
+}
+
+.chart-container-full,
+.chart-container-half {
+  margin: 10px;
+  width: calc(100% - 20px);
+
+  @media #{$brkpoint-md} {
+    margin: 20px 25px;
+    width: calc(100% - 50px);
+  }
+}
+
+.social-container, 
+.members-container, 
+.recent-container {
+  display: flex;
+  align-items: center;
+}
+
+.social-container {
+  @include rounded(10px);
+  background-color: $white-smoke;
+  border: 1px solid $silver-gray;
+  margin: 10px;
+
+  @media #{$brkpoint-md} {
+    margin: 0 5px 0 0;
+  }
+
+  @media #{$brkpoint-lg} {
+    margin: 0 10px 0 0;
+  }
+}
+
+.members-container,
+.recent-container {
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid $silver-gray;
+  margin: 0 10px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @media #{$brkpoint-md} {
+    flex-direction: row;
+    margin: 0 25px;
+  }
+}
+
+.members-container {
+  font-weight: $font-weight--regular;
+  
+  a {  
+    color: $light-plum;
+    text-decoration: none;
+
+    &:hover {
+      font-weight: $font-weight--bold;
+    }
+  }
+
+  p {
+    line-height: .5rem;
+    margin: 0;
+  }
+
+  p:last-child {
+    padding-bottom: 20px;
+
+    @media #{$brkpoint-md} {
+    padding: 0;
+    }
+  }
+
+  @media #{$brkpoint-lg} {
+    margin: 0 25px;
+  }
+}
+
+.message-container {
+  display: grid;
+  grid-template-rows: 40px 150px 1fr;
+  gap: 10px;
+  margin: 0 10px;
+
+  @media #{$brkpoint-md} {
+    margin: 0 25px;
+  }
+}
+
+.traffic-wrapper {
+  @media #{$brkpoint-md} {
+    display: grid;
+    grid-column: 1;
+  }
+}
+
+.toggle-wrapper {
+  @media #{$brkpoint-md} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @media #{$brkpoint-lg} {
+    max-width: 72%;
+  }
+}

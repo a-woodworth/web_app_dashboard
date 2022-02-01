@@ -1,0 +1,48 @@
+// ___________________________________________________________________
+// Global Config
+// ___________________________________________________________________
+
+// Google Font Stack
+$font-url--google: 'https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400&display=swap';
+
+//Font Stack
+$font-family--primary: 'Martel Sans', sans-serif;
+
+// Font Weights
+$font-weight--extra-bold: 400;
+$font-weight--bold: 300;
+$font-weight--regular: 200;
+
+// Descriptive Base Colors
+$black: #000;
+$dark-gray: #777;
+$gray: #999;
+$frost-white: #f9fafa;
+$light-gray: #D8D9DB;
+$light-plum: #7477bf;
+$mint-green: #81c98f;
+$plum: #4d4c72;
+$silver-gray: #ccc;
+$white: #fff;
+$white-smoke: #f5f5f5;
+
+// Color Usage
+$color-accent: $mint-green;
+$color-bg-primary: $light-plum;
+$color-bg-secondary: $plum;
+$color-bg-tertiary: $white-smoke;
+$color-border: $silver-gray; 
+$color-btn-secondary: $gray;
+$color-notifications: $frost-white;
+$color-text-primary: $white;
+$color-text-secondary: $black;
+$color-text-tertiary: $dark-gray;
+$color-toggle: $light-gray;
+
+// Text
+$base__font-size: 1em;
+$base__line: 1.6rem;
+
+// Breakpoints
+$brkpoint-md: '(min-width: 768px)';
+$brkpoint-lg: '(min-width: 1024px)';

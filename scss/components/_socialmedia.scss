@@ -1,0 +1,63 @@
+// ___________________________________________________________________
+// Social Media Styles
+// ___________________________________________________________________
+
+.social {
+  margin-bottom: 10px;
+}
+
+.social-image,
+.profile-image {
+  @include size(48px);
+  @extend %img-circle;
+}
+
+.social-image {
+  background-color: $light-plum;
+  margin: 20px 10px 20px 10px;
+  overflow: hidden;
+  align-self: start;
+}
+
+.social-icon {
+  fill: $white;
+  position: relative;
+  top: 25%;
+  left: 25%;
+  overflow: hidden;
+}
+
+.social-text {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-top: 20px;
+
+  p:first-child {
+    @include text($base__font-size, $font-weight--extra-bold, $light-plum);
+    line-height: 1rem;
+    margin: 0;
+  }
+
+  p:last-child {
+    @include text(2.5em, $font-weight--regular, $dark-gray);
+    margin: -15px 0 auto;
+  }
+}
+
+/*Social Media SVGs*/
+.is-off-screen {
+  @include size(0);
+}
+
+.social-wrapper {
+  @media #{$brkpoint-md} {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 20px 20px 25px;
+  }
+
+  @media #{$brkpoint-lg} {
+    margin: 0 15px 20px 25px;
+  }
+}

@@ -1,0 +1,56 @@
+// ___________________________________________________________________
+// Navigation
+// ___________________________________________________________________
+
+nav {
+  background-color: $plum;
+  grid-area: navigation;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  @media #{$brkpoint-md} {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.nav-icon {
+  @include size(40px);
+  margin-top: 10px;
+
+  @media #{$brkpoint-md} {
+    @include size(60px);
+    margin-top: 20px;
+  }
+}
+
+/*Traffic Section Navigation*/
+.traffic-nav {
+  @include reset-list;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  li {
+    cursor: pointer;
+
+    @media #{$brkpoint-md} {
+      line-height: $base__line;
+      margin-left: 10px;
+    }
+  }
+
+  @media #{$brkpoint-md} {
+    grid-column: 2;
+    justify-content: flex-end;
+    margin: 0 25px;
+  }
+}
+
+.active {
+  @include rounded(20px);
+  background-color: $mint-green;
+  color: $white;
+  padding: 4px 10px;
+}

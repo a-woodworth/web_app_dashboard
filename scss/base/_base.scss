@@ -1,0 +1,39 @@
+// ___________________________________________________________________
+// Base Styles
+// ___________________________________________________________________
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-family--primary;
+  margin: 0;
+  padding: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+h2, 
+h3 {
+  line-height: $base__line;
+}
+
+h2 {
+  @include text(1.5em, $font-weight--extra-bold);
+}
+
+h3 {
+  @include text($base__font-size, $font-weight--bold);
+  @extend %allcaps;
+}
+
+p {
+  @include text($base__font-size);
+}

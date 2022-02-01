@@ -1,0 +1,75 @@
+// ___________________________________________________________________
+// Header
+// ___________________________________________________________________
+
+.header {
+  background-color: $light-plum;
+  color: $white;
+  grid-area: header;
+  padding: 0 10px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media #{$brkpoint-md} {
+    padding: 0;
+  }
+
+  h1, 
+  h3 {
+    text-transform: none;
+  }
+
+  h1 {
+    @include text(1.125em, $font-weight--extra-bold);
+
+    @media #{$brkpoint-md} {
+      font-size: 2em;
+      margin-left: 25px;
+    }
+  }
+
+  h3 {
+    @include text(.75em);
+
+    @media #{$brkpoint-md} {
+      font-size: $base__font-size;
+    }
+  }
+}
+
+.trademark {
+  font-weight: $font-weight--regular;
+}
+
+.header-user-block {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+
+  @media #{$brkpoint-md} {
+    margin-right: 25px;
+  }
+}
+
+.header-notifications {
+  margin-right: 15px;
+  position: relative;
+}
+
+.header-avatar img {
+  @include size(40px);
+  @extend %img-circle;
+  margin: 10px;
+
+  @media #{$brkpoint-md} {
+    @include size(60px);
+  }
+}
+
+.header-avatar {
+  border-left: 2px solid $silver-gray;
+}

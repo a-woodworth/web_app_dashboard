@@ -1,0 +1,75 @@
+// ___________________________________________________________________
+// Forms
+// ___________________________________________________________________
+
+.timezone,
+.form-field, 
+.form-area {
+  @include rounded(4px);
+  background-color: $white-smoke;
+  border: 1px solid $silver-gray;
+  width: 100%;
+}
+
+.timezone,
+input[type="text"], 
+textarea {
+  @include text(.85em, $font-weight--regular);
+  font-family: $font-family--primary;
+  line-height: $base__line;
+  margin: 0;
+  padding: 5px 0 5px 10px;
+}
+ 
+.timezone {  
+  color: $gray;
+  padding: 10px 15px;
+  margin: 10px;
+  width: calc(100% - 20px);
+
+  @media #{$brkpoint-md} {
+    margin: 0 25px;
+    width: calc(100% - 50px);
+  }
+}
+
+textarea {
+  height: 150px;
+  margin: 0 0 10px;
+
+  &::placeholder, 
+  input::placeholder {
+    color: $silver-gray;
+    opacity: 1;
+  }
+}
+
+.custom-select {
+  position: relative;
+
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  &::after {
+    content: '\25e2';
+    color: $light-plum;
+    text-shadow: .5px .5px 5px #999;
+    position: absolute;
+    top: 20%;
+    right: 30px;
+    transform: rotate(45deg);
+
+    @media #{$brkpoint-md} {
+      top: 10%;
+      right: 45px;
+    }
+  }
+}
+
+input[type="text"] {
+  @media #{$brkpoint-md} {
+    margin: 0;
+  }
+}

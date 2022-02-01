@@ -1,0 +1,46 @@
+// Toggle switch overrides
+
+@media only screen {
+  .switch-ios.switch-light span span {
+    color: #7477bf; /*Changed to custom color*/
+  }
+
+  .switch-ios.switch-light > span {
+    outline: 2px solid #D8D9DB; /*Added custom outline color*/
+  }
+
+  .switch-ios.switch-light > span span {
+    line-height: 2.25em; /*Changed to custom size*/
+  }
+
+  .switch-ios.switch-light > span span:first-of-type {
+    padding-left: 3.5em; /*Changed to custom size*/
+  }
+
+  .switch-ios.switch-light > span span:last-of-type {
+    padding-right: 3.5em; /*Changed to custom size*/
+  }
+
+  .switch-ios.switch-light input:checked ~ span a {
+    border-color: #D8D9DB; /*Changed to custom color*/
+  }
+
+  .switch-ios.switch-light input:checked ~ span {
+    border-color: #7477bf;  /*Changed to custom color*/
+    box-shadow: inset 0 0 0 30px #7477bf; /*Changed to custom color*/
+  }
+}
+
+// Safari outline border-radius issue
+.switch-ios.switch-light > span {
+  outline-style: auto;
+}
+
+// autoComplete overrides -- Styles linked via CDN
+.autoComplete_wrapper > input {
+  width: 100%;
+}
+
+.autoComplete_wrapper > ul > li mark {
+  color: #81c98f;
+}

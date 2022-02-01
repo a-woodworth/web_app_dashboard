@@ -1,0 +1,43 @@
+// ___________________________________________________________________
+// Alerts
+// ___________________________________________________________________
+
+.alert-banner,
+.alert-banner-close {
+  background-color: $light-plum;
+}
+
+.alert-banner {
+  @include rounded(4px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px 25px;
+  padding: 0 10px;
+
+  p {
+  color: $white;
+  font-weight: $font-weight--regular;
+  line-height: 1rem;
+  }
+
+  @media #{$brkpoint-md} {
+    margin: 0 25px 25px;
+  }
+}
+
+.alert-banner-close {
+  @extend %allcaps;
+  border: none;
+  color: $white;
+  cursor: pointer;
+  font-family: $font-family--primary;
+  font-weight: $font-weight--regular;
+  line-height: 1rem;
+}
+
+.alert-wrapper {
+  @media #{$brkpoint-md} {
+    grid-column: 1 / span 2;
+  }
+}

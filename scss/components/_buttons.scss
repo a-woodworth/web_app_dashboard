@@ -1,0 +1,78 @@
+// ___________________________________________________________________
+// Buttons & Toggle Switch
+// ___________________________________________________________________
+
+.toggle-btn {
+  width: 100px; 
+}
+
+.btn-primary {
+  @include rounded(4px);
+  @extend %allcaps;
+  background-color: $light-plum;
+  border: 1px solid $silver-gray;
+  color: $white;
+  font-family: $font-family--primary;
+  font-size: $base__font-size;
+  font-weight: $font-weight--regular;
+  margin: 10px 0 20px;
+  padding: 5px 0;
+  width: 100%;
+}
+
+.btn-secondary {
+  @extend .btn-primary;
+  background-color: $gray;
+}
+
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+  padding-bottom: 10px;
+
+  p {
+    @include text(.85em, $font-weight--regular);
+  }
+
+  label {
+    @extend %allcaps;
+    font-weight: $font-weight--regular;
+  }
+
+  @media #{$brkpoint-md} {
+    margin: 0 25px;
+  }
+
+  &:first-child {
+    @media #{$brkpoint-md} {
+      padding: 0;
+    }
+  }
+
+  &:last-child {
+    @media #{$brkpoint-md} {
+      grid-column: 1 / span 1;
+    }
+  }
+
+  &:first-child,
+  &:last-child {
+    @media #{$brkpoint-lg} {
+      grid-column: 1 / span 2;
+      gap: 10px;
+    }
+  }
+}
+
+.settings-btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 0 10px;
+
+  @media #{$brkpoint-md} {
+    margin: 10px 25px 0;
+  }
+}

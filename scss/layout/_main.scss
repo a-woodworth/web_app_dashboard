@@ -1,0 +1,187 @@
+// ___________________________________________________________________
+// Main - Dashboard & Section Styles
+// ___________________________________________________________________
+
+main {
+  display: grid;
+  grid-area: main;
+
+  @media #{$brkpoint-md} {
+    grid-template-columns: 50%;
+  }
+}
+
+.main-header {
+  display: flex;
+  @include size(100%, 60px);
+  margin-bottom: 20px;
+
+  @media #{$brkpoint-md} {
+    grid-column: 1 / span 2;
+    height: 80px;
+  }
+}
+
+.headline {
+  @include text($base__font-size, $font-weight--extra-bold);
+  margin-top: 20px;
+  padding: 0 10px;
+
+  @media #{$brkpoint-md} {
+    font-size: 1.5em;
+    padding: 0 25px;
+  }
+}
+
+.tab {
+  @include size(100%);
+  background-color: $white-smoke;
+  border-bottom: 2px solid $silver-gray;
+  border-left: 2px solid $silver-gray;
+}
+
+canvas {
+  max-width: 100%;
+}
+
+.traffic {
+  width: calc(100%);
+}
+
+.daily,
+.mobile,
+.social,
+.members,
+.recent-activity,
+.message,
+.settings {
+  border-top: 1px solid $silver-gray;
+  padding-top: 15px;
+}
+
+.traffic, 
+.social,
+.members, 
+.recent-activity,
+.message,
+.settings {
+  @media #{$brkpoint-md} {
+    grid-column: 1 / span 2;
+  }
+}
+
+.daily {
+  @media #{$brkpoint-md} {
+    border-right: 1px solid $silver-gray;
+    grid-column: 1 / span 1;
+  }
+}
+
+.mobile {
+  @media #{$brkpoint-md} {
+    grid-column: 2 / span 1;
+  }
+}
+
+.members, 
+.message {
+  @media #{$brkpoint-lg} {
+    grid-column: 1 / span 1;
+    border-right: 1px solid $silver-gray;
+  }
+}
+
+.recent-activity,
+.settings {
+  @media #{$brkpoint-lg} {
+    grid-column: 2 / span 1;
+  }
+}
+
+.settings {
+  @media #{$brkpoint-lg} {
+    display: grid;
+    grid-template-rows: 25px 160px 1fr;
+  }
+}
+
+.traffic-header {
+  h3 {
+    @media #{$brkpoint-md} {
+    line-height: 3;
+    }
+  }
+
+  @media #{$brkpoint-md} {
+    grid-column: 1;
+  }
+}
+
+.traffic-header h3,
+.daily h3,
+.mobile h3,
+.social h3,
+.members h3,
+.recent-activity h3,
+.message h3,
+.settings h3 {
+  @include text($base__font-size, $font-weight--extra-bold, $black);
+  margin: 0 auto;
+  padding-left: 10px;
+
+  @media #{$brkpoint-md} {
+    padding-left: 25px;
+  }
+}
+
+.message h3,
+.settings h3 {
+  @media #{$brkpoint-lg} {
+    margin: 0 0 10px;
+  }
+}
+
+.profile-image {
+  margin: 15px 0;
+}
+
+.members-info, 
+.recent-post {
+  margin: auto;
+  text-align: center;
+
+  @media #{$brkpoint-md} {
+    margin-left: 10px;
+    text-align: left;
+  }
+}
+
+.recent-post {
+  @include text(.85em, $font-weight--regular);
+  line-height: 1rem;
+  padding-bottom: 20px;
+  width: 100%;
+
+  p {
+    margin: 0;
+  }
+
+  @media #{$brkpoint-md} {
+    padding: 0;
+  }
+}
+
+.bold, 
+.post-title {
+  font-weight: $font-weight--extra-bold;
+}
+
+.arrow {
+  line-height: 0;
+  margin: 0;
+  visibility: hidden;
+
+  @media #{$brkpoint-md} {
+    visibility: visible;
+  }
+}
