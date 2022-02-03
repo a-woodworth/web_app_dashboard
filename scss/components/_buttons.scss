@@ -14,15 +14,23 @@
   color: $white;
   font-family: $font-family--primary;
   font-size: $base__font-size;
-  font-weight: $font-weight--regular;
+  font-weight: $font-weight--bold;
   margin: 10px 0 20px;
   padding: 5px 0;
   width: 100%;
+
+  &:hover {
+    background: linear-gradient(0.25turn, $plum, $light-plum);
+  }
 }
 
 .btn-secondary {
   @extend .btn-primary;
   background-color: $gray;
+
+  &:hover {
+    background: linear-gradient(0.25turn, $dark-gray, $gray);
+  }
 }
 
 .toggle {

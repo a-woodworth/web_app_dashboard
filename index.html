@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Stylesheet for autoComplete.js: https://tarekraafat.github.io/autoComplete.js/#/styles -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/css/autoComplete.02.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/css/autoComplete.01.min.css">
     <link rel="stylesheet" href="css/application.css">
 
     <title>WebApp Dashboard</title>
@@ -12,7 +12,7 @@
 
   <body class="grid-container">
     <!-- Header Section -->
-    <header class="header">
+    <header class="header" id="home-link">
       <div class="logo">
         <h1>Web<span class="trademark">App&trade;</span></h1>
       </div>
@@ -36,24 +36,34 @@
     </header>
 
     <!-- Navigation Section -->
-    <nav>
-      <a href="#">
-        <img src="svgs/home.svg" alt="Home icon" class="nav-icon" title="Home">
-      </a>
-      <a href="#">
-        <img src="svgs/bar-chart.svg" alt="Traffic icon" class="nav-icon" title="Traffic">
-      </a>
-      <a href="#">
-        <img src="svgs/members.svg" alt="Members icon" class="nav-icon" title="Members">
-      </a>
-      <a href="#">
-        <img src="svgs/settings.svg" alt="Settings icon" class="nav-icon" title="Settings">
-      </a>
+    <nav class="sticky">
+      <ul>
+        <li>
+          <a href="#home-link">
+            <img src="svgs/home.svg" alt="Home icon" class="nav-icon" title="Home">
+          </a>
+        </li>
+        <li>
+          <a href="#charts-link">
+            <img src="svgs/bar-chart.svg" alt="Traffic icon" class="nav-icon" title="Traffic">
+          </a>
+        </li>
+        <li>
+          <a href="#members-link">
+            <img src="svgs/members.svg" alt="Members icon" class="nav-icon" title="Members">
+          </a>
+        </li>
+        <li>
+          <a href="#settings-link">
+            <img src="svgs/settings.svg" alt="Settings icon" class="nav-icon" title="Settings">
+          </a>
+        </li>
+      </ul>
     </nav>
 
     <!-- Main Section -->
     <main>
-      <div class="main-header">
+      <div class="main-header" id="charts-link">
         <h2 class="headline">Dashboard</h2>
         <div class="tab"></div>
       </div>
@@ -106,6 +116,7 @@
           <div class="social-container">
             <div class="social-image">
               <svg role="img" class="social-icon">
+                <title>facebook icon</title>
                 <use href="#facebook"></use>
               </svg>
             </div>
@@ -117,6 +128,7 @@
           <div class="social-container">
             <div class="social-image">
               <svg role="img" class="social-icon">
+                <title>instagram icon</title>
                 <use href="#instagram"></use>
               </svg>
             </div>
@@ -128,6 +140,7 @@
           <div class="social-container">
             <div class="social-image">
               <svg role="img" class="social-icon">
+                <title>twitter icon</title>
                 <use href="#twitter"></use>
               </svg>
             </div>
@@ -140,7 +153,7 @@
       </section>
 
       <!-- New Members Section -->
-      <section class="members">
+      <section class="members" id="members-link">
         <h3>New Members</h3>
         <div class="members-container">
           <img src="images/member-1.jpg" alt="" class="profile-image">
@@ -220,7 +233,7 @@
           <input type="text" id="autoComplete" name="user-name" 
           placeholder="Search for User" class="form-field"  dir="ltr" 
           spellcheck=false autocomplete="off" autocapitalize="off" 
-          maxlength="2048" tabindex="1">
+          maxlength="2048" tabindex="0">
           <textarea id="user-message" name="user-message" 
           placeholder="Message for User" class="form-area"></textarea>
           <button class="btn-primary" id="send">Send</button>
@@ -228,7 +241,7 @@
       </section>
 
       <!-- Settings Section -->
-      <section class="settings">
+      <section class="settings" id="settings-link">
         <h3>Settings</h3>
         <div class="toggle-wrapper">
           <div class="toggle">

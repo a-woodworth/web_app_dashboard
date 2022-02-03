@@ -15,6 +15,7 @@
 input[type="text"], 
 textarea {
   @include text(.85em, $font-weight--regular);
+  border: 1px solid $silver-gray;
   font-family: $font-family--primary;
   line-height: $base__line;
   margin: 0;
@@ -26,6 +27,10 @@ textarea {
   padding: 10px 15px;
   margin: 10px;
   width: calc(100% - 20px);
+
+  &:focus {
+    outline: auto;
+  }
 
   @media #{$brkpoint-md} {
     margin: 0 25px;
@@ -50,6 +55,10 @@ textarea {
   select {
     appearance: none;
     -webkit-appearance: none;
+
+    &:focus {
+      outline: 2px auto -webkit-focus-ring-color;
+    }
   }
 
   &::after {

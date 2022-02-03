@@ -1,5 +1,7 @@
 // Toggle switch overrides
 
+// Note: Commented out deprecated media query for webkit-sibling-bug fix
+
 @media only screen {
   .switch-ios.switch-light span span {
     color: #7477bf; /*Changed to custom color*/
@@ -38,7 +40,15 @@
 
 // autoComplete overrides -- Styles linked via CDN
 .autoComplete_wrapper > input {
+  background-color: $white-smoke;
+  border-radius: 4px;
   width: 100%;
+}
+
+.autoComplete_wrapper > input:focus {
+  // Add back focus ring
+  outline: 2px auto Highlight;
+  outline: 2px auto -webkit-focus-ring-color;
 }
 
 .autoComplete_wrapper > ul > li mark {
