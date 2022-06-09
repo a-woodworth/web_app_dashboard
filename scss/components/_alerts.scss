@@ -2,6 +2,10 @@
 // Alerts
 // ___________________________________________________________________
 
+@use '../utilities/variables' as *;
+@use '../utilities/helpers' as *;
+@use '../utilities/mixins' as *;
+
 .alert-banner,
 .alert-banner-close {
   background-color: $light-plum;

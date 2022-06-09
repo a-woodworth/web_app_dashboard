@@ -1,11 +1,10 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400&display=swap");
 .header-avatar img, .social-image,
 .profile-image, .notifications-dot {
   border-radius: 50%;
 }
 
-.toggle label, .btn-primary, .btn-secondary, .alert-banner-close, h3 {
+.btn-primary, .btn-secondary, .toggle label, .alert-banner-close, h3 {
   text-transform: uppercase;
 }
 

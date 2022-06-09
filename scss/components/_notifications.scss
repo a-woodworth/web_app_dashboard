@@ -2,6 +2,10 @@
 // Notifications
 // ___________________________________________________________________
 
+@use '../utilities/variables' as *;
+@use '../utilities/helpers' as *;
+@use '../utilities/mixins' as *;
+
 .notifications-icon {
   @include size(25px);
   fill: $white;

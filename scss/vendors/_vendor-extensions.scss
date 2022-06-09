@@ -1,5 +1,7 @@
 // Toggle switch overrides
 
+@use '../utilities/variables' as *;
+
 // Note: Commented out deprecated media query for webkit-sibling-bug fix
 
 @media only screen {

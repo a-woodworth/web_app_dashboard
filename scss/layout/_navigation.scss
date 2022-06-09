@@ -2,6 +2,9 @@
 // Navigation
 // ___________________________________________________________________
 
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
 nav {
   background-color: $plum;
   grid-area: navigation;

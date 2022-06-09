@@ -2,6 +2,9 @@
 // Main - Dashboard & Section Styles
 // ___________________________________________________________________
 
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
 main {
   display: grid;
   grid-area: main;

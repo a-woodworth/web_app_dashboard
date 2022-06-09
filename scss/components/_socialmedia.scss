@@ -2,6 +2,10 @@
 // Social Media Styles
 // ___________________________________________________________________
 
+@use '../utilities/variables' as *;
+@use '../utilities/helpers' as *;
+@use '../utilities/mixins' as *;
+
 .social {
   margin-bottom: 10px;
 }

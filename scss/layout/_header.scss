@@ -2,6 +2,10 @@
 // Header
 // ___________________________________________________________________
 
+@use '../utilities/variables' as *;
+@use '../utilities/helpers' as *;
+@use '../utilities/mixins' as *;
+
 .header {
   background-color: $light-plum;
   color: $white;
